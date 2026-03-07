@@ -5,6 +5,7 @@
 #ifndef PERUZZI_CLASSEVECTORCPP_MYVECTOR_H
 #define PERUZZI_CLASSEVECTORCPP_MYVECTOR_H
 #include <iosfwd>
+#include <iostream>
 
 
 class MyVectorInt {
@@ -20,7 +21,7 @@ public:
     ~MyVectorInt();
     int GetSize() const;
     int GetCapacity() const;
-    bool IsEmpty();
+    bool IsEmpty() const;
     int& At(int index);
     const int& At (int index) const;
     int& operator[](int index);
@@ -32,7 +33,7 @@ public:
     void Clear();
     void Resize(int newSize);
     void Reserve(int newCapacity);
-    void operator= (const MyVectorInt & other);
+    MyVectorInt & operator= (const MyVectorInt & other);
 
     void Sort();
     void Sort(bool ascending);
@@ -45,8 +46,8 @@ public:
 
     //facoltativi
     void Insert(int pos, int value);
-    void erease (int pos);
-    bool operator==(const MyVectorInt &) const;
+    void Erease (int pos);
+    bool operator==(const MyVectorInt & altro) const;
 };
 
 
